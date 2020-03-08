@@ -1,0 +1,94 @@
+
+// STYLING
+header, nav 
+    background-color: $primary-blue
+    color: $text-gray
+.hamburger>div, .hamburger>div:before, .hamburger>div:after
+    background-color: $text-gray
+.transform>div
+    background-color: #0000
+
+
+// FUNCTIONALITY
+.header-container
+    display: flex
+    justify-content: space-between
+    position: relative
+    padding: 1.2rem 0
+    margin: 0 2.5%
+    height: 6.4rem
+    @media (min-width: 600px)
+        margin: 0 5%
+    @media (min-width: 1000px)
+        margin: 0 auto
+        max-width: 1000px
+    img 
+        width: 4rem
+    .hamburger 
+        z-index: 50000
+        width: 4rem
+        height: 4rem
+        @media (min-width: 1000px)
+            display: none
+        &>div
+            width: 30px
+            height: 2px
+            position: relative
+            margin-top: 13px
+            transition: 1s ease
+            @media (min-width: 1000px)
+                display: none
+            &::before, &::after
+                content: ""
+                position: absolute
+                left: 0
+                width: 30px
+                height: 2px
+                transition: 1s ease
+            &::after
+                bottom: -10px
+            &::before
+                bottom: -5px
+    .transform>div
+        transition: 1s ease
+        &::before, &::after
+            transition: 1s ease
+        &::before 
+            transform: rotate(45deg)
+        &::after 
+            transform: rotate(-45deg)
+            bottom: -5px
+
+nav 
+    position: fixed
+    top: 0 
+    bottom: 0
+    z-index: 1000
+    margin-left: 100%
+    padding: 6.4rem 8% 0
+    width: 60%
+    text-align: right
+    transition: 1s ease
+    &.active
+        margin-left: 40%
+        transition: 1s ease
+    ul 
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+    li 
+        margin: 1.2rem 0 0
+        width: 100%
+    @media (min-width: 1000px)
+        position: unset
+        bottom: unset
+        padding: unset
+        margin: unset
+        width: unset
+        ul 
+            justify-content: flex-end
+        li 
+            width: auto
+            margin-right: 2.4rem
+            &:last-of-type
+                margin-right: unset
