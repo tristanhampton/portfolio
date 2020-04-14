@@ -8,7 +8,7 @@
 
 
 body 
-    color: $text-gray
+  color: $text-gray
 
 
 @font-face 
@@ -32,7 +32,7 @@ nav
 .featured
   font-size: 3rem
   line-height: 2.8rem
-  @media (min-width: 600px)
+  @include break(small)
     p 
       font-size: 2rem
       line-height: 2.4rem
@@ -42,30 +42,15 @@ nav
 
 h1 
   font: 6.4rem/7.2rem 'Forque', sans-serif
-  // @media (min-width: 550px)
-  //   font-size: 3.125rem
-  //   line-height: 4.8rem
-  // @media (min-width: 700px)
-  //   font-size: 3.79rem
-  //   line-height: 4.8rem
+
 
 h2 
   font: 4.2rem/4.8rem 'Forque', serif
-  // @media (min-width: 550px)
-  //   font-size: 2.5rem
-  //   line-height: 4.8rem
-  // @media (min-width: 700px)
-  //   font-size: 2.843rem
-  //   line-height: 4.8rem
+
 
 h3 
   font: 3.2rem/4.8rem 'Forque', serif
-  // @media (min-width: 550px)
-  //   font-size: 2rem
-  //   line-height: 2.4rem
-  // @media (min-width: 700px)
-  //   font-size: 2.133rem
-  //   line-height: 2.4rem
+
 
 a 
   color: inherit

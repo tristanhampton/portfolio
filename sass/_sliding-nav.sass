@@ -17,9 +17,9 @@ header, nav
     padding: 1.2rem 0
     margin: 0 2.5%
     height: 6.4rem
-    @media (min-width: 600px)
+    @include break(small)
         margin: 0 5%
-    @media (min-width: 1000px)
+    @include break(medium)
         margin: 0 auto
         max-width: 1000px
     img 
@@ -28,7 +28,7 @@ header, nav
         z-index: 50000
         width: 4rem
         height: 4rem
-        @media (min-width: 1000px)
+        @include break(med)
             display: none
         &>div
             width: 30px
@@ -36,7 +36,7 @@ header, nav
             position: relative
             margin-top: 13px
             transition: 1s ease
-            @media (min-width: 1000px)
+            @include break(medium)
                 display: none
             &::before, &::after
                 content: ""
@@ -79,7 +79,7 @@ nav
     li 
         margin: 1.2rem 0 0
         width: 100%
-    @media (min-width: 1000px)
+    @include break(medium)
         position: unset
         bottom: unset
         padding: unset
