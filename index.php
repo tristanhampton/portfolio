@@ -1,47 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148182005-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-148182005-2');
-  </script>
-
-  <meta charset="utf-8">
-  <title>Tristan Hampton Web Development</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-
-<body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-  <header>
-    <div class="header-container">
-      <img src="img/logo.svg" alt="Tristan Hampton's logo. It's a cat in a coffee cup.">
-      <div class="hamburger"><div></div></div>
-      
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#specialties">Specialties</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a target="_blank" href="https://github.com/tristanhampton">GitHub</a></li>
-        </ul>
-      </nav>
-    </div>
-      
-  </header>
+<?php include('includes/header.php') ?>
 
   <div class="splash-container">
     <div class="splash">
@@ -239,39 +196,10 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="large-container">
-        <h2>Want to Work Together?</h2>
-        <p>Send me a message!</p>
-        <form action="https://formspree.io/mvornbdk" method="POST">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" name="name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" name="email">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          </div>
-          <div class="form-group">
-            <button>Submit</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
   </main>
 
-
-  <footer>
-      
-  </footer>
-
-
-  <script src="js/main.js"></script>
+  <?php include('includes/footer.php') ?>
+  
 </body>
 
 </html>
