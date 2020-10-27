@@ -32,8 +32,23 @@ h2 {
   margin-bottom: 1.2rem;
 }
 
-section {
-  padding: 4.8rem 5%;
+h2, h3 {
+  width: 100%;
+}
+
+section, main > div {
+  padding: 2.4rem 5%;
+}
+
+@media (min-width: 600px) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .flex p, .flex img {
+    width: 48%;
+  }
 }
 
 /* ==========================================================================
@@ -563,6 +578,13 @@ a:hover {
 }
 .splash h1 {
   margin-bottom: 1.2rem;
+}
+
+.case-study img {
+  margin: 1.2rem 0 2.4rem;
+}
+.case-study img:last-child {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

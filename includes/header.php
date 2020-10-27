@@ -14,7 +14,7 @@
 
   <meta charset="utf-8">
   <title>Tristan Hampton Web Development</title>
-  <meta name="description" content="">
+  <meta name="description" content="The portfolio for Tristan Hampton, a Web Developer based out of Edmonton, Alberta">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="site.webmanifest">
