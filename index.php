@@ -56,25 +56,20 @@
         <h2>Favourite Projects</h2>
         <div class="project">
           <img src="img/controller.svg" alt="Game controller icon">
-          <h3><a target="_blank" href="http://tristanhampton.ca/games">TH Games</a></h3>
-          <p>A blog style web page built from scratch using WordPress’s engine. It’s main feature is the ability for a user to easily create three kinds of posts, without knowledge of code:</p>
-          <ul>
-            <li>- A detailed page about a game</li>
-            <li>- A review style post</li>
-            <li>- Video content linked from Twitter</li>
-          </ul>
+          <h3><a target="_blank" href="https://tristanhampton.ca/games">TH Games</a></h3>
+          <p>A blog style web page built from scratch using WordPress’s engine. It’s main feature is the ability for a user to easily create posts, including posts made by linking to a twitter video.
         </div>
         <div class="project">
-          <img src="img/bean.svg" alt="Dancing bean icon">
-          <h3><a target="_blank" href="http://tristanhampton.ca/music">Muzzic</a></h3>
-          <p>A small music player built with vanilla JS. It features a JQuery plugin for the navigation menu. This is currently a WIP, but the prototype is live.</p>
+          <img src="img/droplet-red.svg" alt="All Cycles Logo">
+          <h3><a target="_blank" href="https://allcyclesyeg.ca">All Cycles YEG</a></h3>
+          <p>All Cycles is an Edmonton based charity that provides menstrual products for at risk people within the city. I built their website using WordPress as its foundation. <a href="https://tristanhampton.ca/all-cycles.php">Read the case study here!</a></p>
         </div>
         <div class="project">
           <img src="img/indigenous-logo.svg" alt="Indigenous Storytelling Logo">
           <h3>
             <a target="_blank" href="https://indigenousstorytelling.ca">Indigenous Storytelling</a>
           </h3>
-          <p>Indigenous Storytelling was a project brought to us through a client at NAIT. The goal of the website is to provide a safe space for indigenous students to share their stories and learn about their culture. This project was built with the Django framework, and the work that I contributed to this project involved creating a custom user system that allows students, teachers, and admins to create accounts. As well, teachers have the ability to approve the registration of new students before they’re able to view or create content.</p>
+          <p>Indigenous Storytelling was a project who's goal of the website is to provide a safe space for indigenous students to share their stories and learn about their culture. This project was built with the Django framework, and the work that I contributed to this project involved creating a custom user system that allows students, teachers, and admins to create accounts.</p>
         </div>
       </div>
     </section>
