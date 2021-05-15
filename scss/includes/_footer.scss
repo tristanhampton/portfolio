@@ -1,45 +1,85 @@
-.contact {
-  p {
-    margin-top: -1.2rem;
-    margin-bottom: 2.4rem;
-  }
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2.4rem;
-  }
-  label {
-    margin-bottom: 0.6rem;
-  }
-  input {
-    height: 3.6rem;
-    max-width: 300px;
-  }
-  textarea {
-    height: 200px;
-    max-width: 500px;
-    padding: 0.6rem;
-  }
-  input,
-  textarea {
-    border: 1px solid $text-gray;
-    font: 1.6rem/2.4rem 'Open Sans', sans-serif;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
-  }
-  button {
-    width: 100px;
-    height: 35px;
-    background-color: #98FF98;
-    &:hover {
-      background-color: #98F998;
-    }
-    border: none;
-    border-radius: 5px;
-    color: $text-gray;
-    font: 1.6rem/2.4rem 'Open Sans', sans-serif;
-  }
-}
 footer {
-  background-color: $primary-blue;
+	padding: 5rem 0;
+	background-color: $blue;
+
+    .contact {
+    	max-width: 60rem;
+
+    	form {
+    		@include min-bp(500) {
+    			display: flex;
+    			flex-wrap: wrap;
+    		}
+    	}
+    	.form-group {
+	        margin-top: 2.4rem;
+	        width: 100%;
+
+	        @include min-bp(500) {
+	        	&.text,
+	        	&.email {
+	        		width: calc(50% - 2rem);
+	        		margin-right: 2rem;
+	        		max-width: 24rem;
+	        	}
+
+	        	&.email {
+	        		margin-right: 0;
+	        	}
+
+	        	&.textarea {
+	        		max-width: 50rem;
+	        	}
+
+	        	&.submit {
+	        		max-width: 50rem;
+	        	}
+	        }
+    	}
+
+	    label {
+	    	display: block;
+	        margin-bottom: 0.6rem;
+	    }
+
+	    input,
+	    textarea {
+	        @include ff-open-sans-light;
+	        border: 1px solid $text-gray;
+	        padding-left: 0.6rem;
+	        padding-right: 0.6rem;
+	        width: 100%;
+
+	    }
+
+	    input {
+	    	display: block;
+	        height: 3.6rem;
+	    }
+
+	    textarea {
+	    	display: block;
+	        height: 200px;
+	        padding: 0.6rem;
+	    }
+
+	    button {
+	    	@include button($text-gray, #98FF98, darken(#98F998, 5));
+	    	@include ff-open-sans-light;
+	    	border-radius: 5px;
+	    	min-width: 16rem;
+	    }
+    }
+}
+
+.contact {
+    p {
+        margin-top: -1.2rem;
+        margin-bottom: 2.4rem;
+    }
+
+
+
+
+
 }

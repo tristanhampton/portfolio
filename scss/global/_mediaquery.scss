@@ -18,7 +18,7 @@ $breakpoints: (
     }
 
     @else if type-of($max-width)=='number' {
-        @media(max-width: $max-width) {
+        @media(max-width: $max-width * 1px) {
             @content;
         }
     }
@@ -32,7 +32,7 @@ $breakpoints: (
     }
 
     @else if type-of($min-width)=='number' {
-        @media(min-width: $min-width) {
+        @media(min-width: $min-width * 1px) {
             @content;
         }
     }

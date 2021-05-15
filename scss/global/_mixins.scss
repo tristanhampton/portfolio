@@ -131,6 +131,7 @@
  }
  
  @mixin button($color: $black, $bg: $white, $bg-hover: darken($white, 10)) {
+ 	@include reset-button;
  	@include transition;
 	display: inline-block;
 	padding: 1rem 2rem;

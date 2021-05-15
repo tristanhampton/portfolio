@@ -1,117 +1,100 @@
-.featured {
+section.features {
     position: relative;
-    font-size: 3rem;
-    line-height: 2.8rem;
+    padding: 7rem 0 5rem;
 
-    @include min-bp(small) {
-        p {
-            font-size: 2rem;
-            line-height: 2.4rem;
+    h2.tilt {
+        @include min-bp(820) {
+            transform: translateX(-5rem) rotate(-30deg);
+            max-width: 23rem;
         }
     }
 
-    &.specialize {
-        padding-top: 7.2rem;
-        background-color: $primary-yellow;
+    .wrapper {
 
-        @include min-bp(small) {
-            ul {
-                padding: 7.2rem 0 0 10rem;
-            }
-        }
-    }
-
-    &.knowledge {
-        background-color: $primary-pink;
-
-        @include min-bp(small) {
-            ul {
-                padding: 12.2rem 0 0 10rem;
-            }
-
-            li {
-                margin-bottom: 3.6rem;
-            }
-        }
-    }
-
-    h2 {
-        @include min-bp(small) {
-            position: absolute;
-            transform: rotate(-30deg);
-            max-width: 230px;
-        }
-    }
-
-    ul {
-        padding: 0 0 0 2.4rem;
-
-        @include min-bp(small) {
+        @include min-bp(400) {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            max-width: 575px;
+            justify-content: center;
+        }
+
+        @include bp(820) {
+            padding-top: 3rem;
         }
     }
 
-    li {
-        display: flex;
+    .features__item {
         margin-bottom: 1.2rem;
+        max-width: 17rem;
 
-        @include min-bp(small) {
-            width: 30%;
+        @include min-bp(400) {
+            display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            margin-bottom: 5rem;
+            width: 30%;
+            min-width: 15rem;
+        }
+
+        @include bp(400) {
+            display: flex;
             align-items: center;
         }
     }
 
-    img {
-        margin-right: 2.4rem;
+    .features__icon {
         width: 3rem;
         height: 3rem;
 
-        @include min-bp(small) {
-            margin-right: 0;
+        @include bp(400) {
+            margin-right: 2.4rem;
         }
+    }
+
+    &.specialties {
+        background-color: $yellow;
+    }
+
+    &.knowledge {
+        background-color: $pink;
     }
 }
 
-.projects {
-  @include min-bp(small) {
-    .large-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+section.projects {
+    padding: 5rem 0;
+
+    > .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 5rem 5rem;
     }
-  }
-  h2 {
-    margin-bottom: 3.6rem;
-    width: 100%;
-  }
-  h3 {
-    text-align: center;
-  }
-  img {
-    width: 12rem;
-    height: 12rem;
-    margin: 0 auto;
-  }
-  .project {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 4.8rem;
-    width: 100%;
-    img {
-      margin-bottom: 2.4rem;
+
+    h2 {
+        width: 100%;
+        margin-bottom: 3rem;
     }
-    @include min-bp(small) {
-      width: 48%;
+
+    .projects__item {
+        flex-grow: 1;
+        width: 30%;
+        min-width: 25rem;
+
+        .projects__img {
+            display: block;
+            margin: 0 auto 3rem;
+            max-width: 10rem;
+            max-height: 10rem;
+        }
+
+        .projects__title {
+            text-align: center;
+        }
+
+        p {
+            margin: 0 auto;
+            max-width: 50rem;
+        }
     }
-    @media (min-width: 1100px) {
-      width: 31%;
-    }
-  }
-  li {
-    margin-left: 1.2rem;
-  }
 }

@@ -153,11 +153,11 @@ a {
 
 p a {
     &:visited {
-        color: $primary-pink;
+        color: $pink;
     }
 
     &:active {
-        color: $primary-pink;
+        color: $pink;
     }
 }
 
@@ -170,11 +170,11 @@ p a {
     width: 100%;
     max-width: 1024px;
 
-    &.--narrow {
+    &.width--narrow {
         max-width: 750px;
     }
 
-    &.--wide {
+    &.width--wide {
         max-width: 1100px;
     }
 
@@ -185,57 +185,4 @@ p a {
     @include bp(tablet) {
         padding: 0 1.5rem;
     }
-}
-
-
-
-
-
-
-
-
-
-//--- OLD STYLES TO BE REPLACED
-
-h2 {
-  margin-bottom: 1.2rem;
-}
-
-section,
-main > div {
-  padding: 2.4rem 5%;
-  @include min-bp(medium) {
-    padding: 2.4rem 0;
-  }
-}
-.flex {
-  @include min-bp(small) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    p,
-    img {
-      width: 48%;
-    }
-  }
-}
-
-.colour-container {
-  width: 100%;
-  padding: 2.4rem 5%;
-}
-
-
-
-
-.bg-blue {
-    background-color: $primary-blue;
-}
-
-.bg-yellow {
-    background-color: $primary-yellow;
-}
-
-.bg-pink {
-    background-color: $primary-pink;
 }
