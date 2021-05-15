@@ -2,46 +2,11 @@
    Display
    ============================================= */
 
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-size: 62.5%;
-}
-* {
-  box-sizing: border-box;
-  &:before {
-    box-sizing: border-box;
-  }
-  &:after {
-    box-sizing: border-box;
-  }
-}
-.small-container {
-  max-width: 750px;
-  margin: 0 auto;
-}
-.large-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.colour-container {
-  width: 100%;
-  padding: 2.4rem 5%;
-}
-.content-container {
-  max-width: 1024px;
-  margin: 0 auto;
-}
+
 h2 {
   margin-bottom: 1.2rem;
 }
-h2,
-h3 {
-  width: 100%;
-}
-p {
-  max-width: 80rem;
-}
+
 section,
 main > div {
   padding: 2.4rem 5%;
@@ -59,14 +24,4 @@ main > div {
       width: 48%;
     }
   }
-}/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-  display: none !important;
 }

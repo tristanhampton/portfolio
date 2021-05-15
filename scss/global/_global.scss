@@ -1,0 +1,41 @@
+/* Colors
+ *----------------------------------*/
+ $primary-blue						: #88E1F2;
+ $primary-yellow					: #FADBA5;
+ $primary-pink						: #FAA4A4;
+ $primary-green						: #98FF98;
+ $text-gray							: #707070;
+ $dark-gray							: #979797;
+
+
+/* Fonts
+ *----------------------------------*/
+ @font-face {
+	font-family: Forque;
+	src: url('../fonts/Forque.ttf');
+ }
+
+ @font-face {
+	font-family: Open Sans Light;
+	src: url('../fonts/OpenSansCondensed-Light.ttf');
+ }
+
+ @mixin ff-open-sans-light {
+ 	font-family: 'Open Sans Light', 'Helvetica', sans-serif;
+ 	font-weight: 400;
+ }
+
+ @mixin ff-forque {
+ 	font-family: 'Forque', 'Helvetica', sans-serif;
+ 	font-weight: 400;
+ }
+
+ $text-regular						: 1.8rem;
+ $text-regular-mobile				: 1.6rem;
+
+ $heading-1							: 6.4rem;
+ $heading-2							: 3.6rem;
+ $heading-3							: 2.4rem;
+ $heading-4							: 2.0rem;
+ $heading-5							: 2.0rem;
+ $heading-6							: 2.0rem;

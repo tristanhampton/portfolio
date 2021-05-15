@@ -1,16 +1,14 @@
 //--- Global
 @import 'global/reset';
 @import 'global/mediaquery';
-@import 'global/colours';
+@import 'global/global';
 @import 'global/boilerplate';
 @import 'global/animation';
 @import 'global/typography';
 
 //--- Includes
-@import 'includes/featured';
-@import 'includes/sliding-nav';
-@import 'includes/section-featured';
-@import 'includes/section-projects';
+@import 'includes/home';
+@import 'includes/header';
 @import 'includes/footer';
 
 
