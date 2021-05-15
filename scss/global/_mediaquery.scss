@@ -5,6 +5,9 @@ $breakpoints: (
 	'medium' : 1000px,
 	'tablet' : 780px,
 	'small' : 600px,
+
+
+    'mobile-break'          : 780px,
 );
 
 @mixin bp($max-width) {

@@ -4,6 +4,7 @@
  $primary-yellow					: #FADBA5;
  $primary-pink						: #FAA4A4;
  $primary-green						: #98FF98;
+
  $text-gray							: #707070;
  $dark-gray							: #979797;
 
@@ -31,11 +32,26 @@
  }
 
  $text-regular						: 1.8rem;
- $text-regular-mobile				: 1.6rem;
+ $text-regular-break				: 1.6rem;
 
- $heading-1							: 6.4rem;
- $heading-2							: 3.6rem;
- $heading-3							: 2.4rem;
- $heading-4							: 2.0rem;
- $heading-5							: 2.0rem;
- $heading-6							: 2.0rem;
+ $h1								: 6.4rem;
+ $h1-break							: 4.0rem;
+
+ $h2								: 4.2rem;
+ $h2-break							: 4.0rem;
+
+ $h3								: 3.2rem;
+ $h3-break							: 4.0rem;
+
+ $h4								: 2.6rem;
+ $h4-break							: 4.0rem;
+
+ $h5								: 2.2rem;
+ $h5-break							: 4.0rem;
+
+ $h6								: 1.8rem;
+ $h6-break							: 4.0rem;
+
+
+
+ 

@@ -2,11 +2,11 @@
 @import 'global/reset';
 @import 'global/mediaquery';
 @import 'global/global';
-@import 'global/boilerplate';
+@import 'global/mixins';
 @import 'global/animation';
-@import 'global/typography';
 
 //--- Includes
+@import 'includes/layout';
 @import 'includes/home';
 @import 'includes/header';
 @import 'includes/footer';

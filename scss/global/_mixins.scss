@@ -1,0 +1,157 @@
+/* Resets/Fixes
+ *----------------------------------*/
+ @mixin reset-button {
+ 	background: none;
+ 	border: none;
+ }
+
+ @mixin reset-ul {
+ 	padding: 0;
+ 	margin: 0;
+ 	list-style: none;
+ }
+
+ @mixin clearfix {
+ 	overflow: auto;
+
+ 	&:after {
+		content: "";
+		clear: both;
+		display: table;
+ 	}
+ }
+
+
+/* Psuedo Elements
+ *----------------------------------*/
+ @mixin psuedo--before {
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		@content;
+	}
+ }
+
+ @mixin psuedo--after {
+	position: relative;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		@content;
+	}
+ }
+
+ @mixin psuedo--both {
+	position: relative;
+
+	&:after,
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+ }
+
+ @mixin transition {
+ 	transition: all .25s ease;
+ }
+
+
+
+/* Other
+ *----------------------------------*/
+ @mixin transition {
+ 	transition: all 0.3s;
+ }
+
+/* Objects
+ *----------------------------------*/
+ @mixin hamburger-toggle($color: $black) {
+ 	@include button-reset;
+ 	@include psuedo--before;
+ 	@include psuedo--after;
+ 	@include transition;
+ 	width: 30px;
+ 	height: 20px;
+
+ 	&:before,
+ 	&:after {
+ 		@include transition;
+ 		width: inherit;
+ 		height: 2px;
+ 		background-color: $color;
+ 	}
+
+ 	&:after {
+ 		top: 100%;
+ 		transform: translateY(-100%);
+ 	}
+
+ 	span {
+ 		@include transition;
+ 		@include psuedo--before;
+ 		position: absolute;
+ 		top: 0;
+ 		left: 0;
+ 		width: inherit;
+ 		height: inherit;
+
+ 		&:before {
+ 			top: 50%;
+ 			width: inherit;
+ 			height: 2px;
+ 			background-color: $color;
+ 			transform: translateY(-50%);
+ 		}
+ 	}
+
+ 	&.active {
+ 		transform: rotate(180deg);
+
+ 		&:before {
+ 			top: 50%;
+ 			transform: rotate(45deg);
+ 		}
+
+ 		&:after {
+ 			top: 50%;
+ 			transform: rotate(-45deg);
+ 		}
+
+ 		span {
+ 			opacity: 0;
+ 		}
+ 	}
+ 	
+ }
+ 
+ @mixin button($color: $black, $bg: $white, $bg-hover: darken($white, 10)) {
+ 	@include transition;
+	display: inline-block;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	color: $color;
+	background-color: $bg;
+
+	&:hover,
+	&:focus {
+		color: $black;
+		background-color: $bg-hover;
+	}
+ }
+
+
+
+
+
+
+
+
+
+
+
