@@ -850,8 +850,8 @@ section.projects .projects__item p {
   max-width: 50rem;
 }
 
-header,
-nav {
+.site-header,
+.site-nav {
   background-color: #88E1F2;
   color: #707070;
 }
@@ -1107,6 +1107,9 @@ footer .contact button:hover, footer .contact button:focus {
   40% {
     transform: translateY(-5%);
   }
+}
+.page__header {
+  padding: 4rem 0 6rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
