@@ -1056,4 +1056,57 @@ footer .contact button:hover, footer .contact button:focus {
   margin-bottom: 2.4rem;
 }
 
+.js-keybaord {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+}
+.js-keybaord .js-keyboard__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+}
+.js-keybaord .js-keyboard__key {
+  border-radius: 4px;
+  border: 2px solid #000000;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  line-height: 5rem;
+  transition: 0.2s ease;
+  font-weight: 700;
+}
+.js-keybaord .js-keyboard__key#back {
+  width: 9.5rem;
+}
+.js-keybaord .js-keyboard__key#tab {
+  width: 8.5rem;
+}
+.js-keybaord .js-keyboard__key#caps {
+  width: 10.5rem;
+}
+.js-keybaord .js-keyboard__key#enter {
+  width: 12rem;
+}
+.js-keybaord .js-keyboard__key#left-shift, .js-keybaord .js-keyboard__key#right-shift {
+  width: 13.5rem;
+}
+.js-keybaord .js-keyboard__key.active {
+  animation: shake 0.15s ease infinite;
+}
+.js-keybaord .js-keyboard__key.angry {
+  animation: shake 0.075s ease infinite;
+  border-color: red;
+  color: red;
+}
+
+@keyframes shake {
+  20% {
+    transform: translateX(5%);
+  }
+  40% {
+    transform: translateY(-5%);
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

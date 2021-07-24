@@ -1,0 +1,64 @@
+.js-keybaord {
+	display: flex;
+	flex-direction: column;
+	margin-top: 6rem;
+
+	.js-keyboard__row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1.8rem;
+	}
+
+	.js-keyboard__key {
+		border-radius: 4px;
+		border: 2px solid $black;
+		width: 5rem;
+		height: 5rem;
+		text-align: center;
+		line-height: 5rem;
+		transition: .2s ease;
+		font-weight: 700;
+
+		&#back  {
+			width: 9.5rem;
+		}
+
+		&#tab {
+			width: 8.5rem;
+		}
+
+		&#caps {
+			width: 10.5rem;
+		}
+
+		&#enter {
+			width: 12rem;
+		}
+
+		&#left-shift,
+		&#right-shift {
+			width: 13.5rem;
+		}
+
+		&.active {
+			animation: shake .15s ease infinite;
+		}
+
+		&.angry {
+			animation: shake .075s ease infinite;
+			border-color: red;
+			color: red;
+		}
+	}
+}
+
+$percent: 5%;
+@keyframes shake {
+	20% {
+		transform: translateX($percent)
+	}
+
+	40% {
+		transform: translateY(-$percent);
+	}
+}
