@@ -20,8 +20,10 @@ header.addEventListener('click', (evt) => {
 //--- JS Keyboard
 //--------------------------------------------//
 
-//--- Constants
+//--- Variables
 const keys = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+let activeKey;
+let timer;
 
 //--- Functions
 const getKey = (keyEvent) => {
@@ -44,8 +46,14 @@ const getActiveKeyObj = () => {
 }
 
 const activateKey = (key) => {
-    let activeKey = document.querySelector(`#${key}`);
+    activeKey = document.querySelector(`#${key}`);
     activeKey.classList.add('active');
+}
+
+const startTimer = () => {
+    timer = setTimeout(function() {
+        activeKey.classList.add('angry');
+    }, 2500);
 }
 
 //--- Listeners
@@ -62,12 +70,18 @@ document.addEventListener('keydown', function(evt) {
     evt.preventDefault();
 
     let pressedKey = getKey(evt);
-    let activeKey = getActiveKeyObj();
 
     if(pressedKey == activeKey.id) {
+        //- Reset key
         activeKey.classList.remove('active');
-        activeKey.classList.remove('angry')
+        activeKey.classList.remove('angry');
+        clearTimeout(timer);
+
+        //- Start a new key
         activateKey(getRandomKey());
+        startTimer();
+        
+
     } else {
         activeKey.classList.add('angry');
     }
