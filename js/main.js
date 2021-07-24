@@ -45,8 +45,7 @@ const getRandomNumber = (max) => {
 }
 
 const getRandomKey = () => {
-    let i = getRandomNumber(25);
-    return keys[i];
+    return keys[getRandomNumber(25)];
 }
 
 const getActiveKeyObj = () => {
