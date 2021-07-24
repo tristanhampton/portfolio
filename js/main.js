@@ -27,9 +27,17 @@ let timer;
 
 //--- Functions
 const getKey = (keyEvent) => {
-    let key = keyEvent.key;
-    key = key.toUpperCase();
-    return key;
+    if(keyEvent.type == 'click') {
+        let key = keyEvent.target.id;
+        key = key.toUpperCase();
+        return key;
+    }
+
+    if(keyEvent.type == 'keydown') {
+        let key = keyEvent.key;
+        key = key.toUpperCase();
+        return key;
+    }
 }
 
 const getRandomNumber = (max) => {
@@ -56,17 +64,7 @@ const startTimer = () => {
     }, 2500);
 }
 
-//--- Listeners
-
-//-- Page Load
-window.addEventListener('load', () => {
-
-    //- Activate a key
-    activateKey(getRandomKey());
-});
-
-//-- Keypress
-document.addEventListener('keydown', function(evt) {
+const updateKeyboardGame = (evt) => {
     evt.preventDefault();
 
     let pressedKey = getKey(evt);
@@ -85,4 +83,27 @@ document.addEventListener('keydown', function(evt) {
     } else {
         activeKey.classList.add('angry');
     }
+}
+
+//--- Listeners
+
+//-- Page Load
+window.addEventListener('load', () => {
+
+    //- Activate a key
+    activateKey(getRandomKey());
 });
+
+//-- Keypress
+document.addEventListener('keydown', function(evt) {
+    updateKeyboardGame(evt);
+});
+
+//-- Click
+document.addEventListener('click', function(evt) {
+    updateKeyboardGame(evt);
+})
+
+
+
+

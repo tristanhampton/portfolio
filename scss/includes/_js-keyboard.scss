@@ -49,6 +49,12 @@
 			border-color: red;
 			color: red;
 		}
+
+		@include bp(700) {
+			&.mobile {
+				display: none;
+			}
+		}
 	}
 }
 

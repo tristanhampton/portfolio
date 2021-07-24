@@ -1099,6 +1099,11 @@ footer .contact button:hover, footer .contact button:focus {
   border-color: red;
   color: red;
 }
+@media (max-width: 700px) {
+  .js-keybaord .js-keyboard__key.mobile {
+    display: none;
+  }
+}
 
 @keyframes shake {
   20% {
