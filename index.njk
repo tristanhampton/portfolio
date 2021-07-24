@@ -1,6 +1,7 @@
 {% include 'head.njk'%}
 {% include 'header.njk' %}
     <main>
+
         {% include 'home-splash.njk' %}
 
         <section class="features specialties">
@@ -69,6 +70,31 @@
                     <h3 class="projects__title"><a target="_blank" href="https://indigenousstorytelling.ca">Indigenous Storytelling</a></h3>
                     <p>Indigenous Storytelling was a project who's goal of the website is to provide a safe space for indigenous students to share their stories and learn about their culture. This project was built with the Django framework, and the work that I contributed to this project involved creating a custom user system that allows students, teachers, and admins to create accounts.</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Want to Work Together?</h2>
+                <p>Send me a message!</p>
+                
+                <form name="contact" netlify>
+                    <div class="form-group text">
+                        <label for="name">Name</label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="form-group email">
+                        <label for="email">Email</label>
+                        <input type="text" name="email">
+                    </div>
+                    <div class="form-group textarea">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="form-group submit">
+                        <button>Submit</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
