@@ -1,9 +1,10 @@
 //--- Global
-@import 'global/reset';
+@import 'global/normalize.css';
 @import 'global/mediaquery';
 @import 'global/global';
 @import 'global/mixins';
 @import 'global/animation';
+@import "global/elements";
 
 //--- Includes
 @import 'includes/layout';

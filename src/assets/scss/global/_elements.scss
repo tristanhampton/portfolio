@@ -1,0 +1,120 @@
+
+//--- Buttons
+@mixin button--close($color: #000, $thickness: 2px, $size: 4rem) {
+	background-color: transparent;
+	border: none;
+	position: relative;
+	display: block;
+	width: $size;
+	height: $size;
+	font-size: 0;
+	cursor: pointer;
+
+
+	&:before,
+	&:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background-color: $color;
+		width: 80%;
+		height: $thickness;
+		transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	}
+
+	&:after {
+		transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+	}
+}
+
+@mixin button--chevron-toggle($color: #000, $bg: transparent, $hvr-clr: #000, $hvr-bg: transparent) {
+	transition: .3s ease-out;
+	position: relative;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	background-color: $bg;
+	width: 2rem;
+	height: 2rem;
+	
+	&:before,
+	&:after {
+		transition: .3s ease-out;
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+    left: 50%;
+		width: 30%;
+		height: 2px;
+		background: $color;
+    transform: translateY(-50%);
+	}
+  
+  &:before {
+		transform: translateX(-85%) translateY(-50%) rotate(35deg);
+	}
+	
+	&:after {
+		transform: translateX(-15%) translateY(-50%) rotate(-35deg);
+	}
+	
+	&.active {
+		background-color: $hvr-bg;
+		
+		&:before,
+		&:after {
+			background-color: $hvr-clr;
+		}
+    
+    &:before {
+      transform: translateX(-85%) translateY(-50%) rotate(-215deg);
+    }
+		
+		&:after {
+			transform: translateX(-15%) translateY(-50%) rotate(215deg);
+		}
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $hvr-bg;
+		
+		&:before,
+		&:after {
+			background-color: $hvr-clr;
+		}
+	}
+}
+
+//--- Hovers
+@mixin link-hover--drop($color, $hover, $thickness) {
+	text-underline-offset: var(--offset, 0);
+	text-decoration: underline $thickness;
+	text-decoration-color: transparent;
+	transition: --offset 400ms, text-decoration-color 400ms, color 400ms;
+	color: $color;
+
+	&:hover,
+	&:focus {
+		--offset: 2px;
+		color: $hover;
+		text-decoration-color: $hover;
+	}
+
+	@supports not (background: paint(something)) {
+		text-decoration: underline; // Safar fallback (no width)
+		text-decoration: underline $thickness;
+		text-decoration-color: transparent;
+		transition: text-underline-offset 400ms, text-decoration-color 400ms, color 400ms;
+		color: $color;
+
+		&:hover,
+		&:focus {
+			text-underline-offset: 0.15em;
+			color: $hover;
+		}
+	}
+}

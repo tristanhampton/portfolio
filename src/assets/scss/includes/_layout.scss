@@ -6,6 +6,7 @@ html {
 }
 
 body {
+    margin: 0;
     @include ff-open-sans-light;
     font-size: $text-regular;
 
