@@ -1,4 +1,3 @@
-
 //--- Menu
 let hamburger = document.querySelector('.hamburger');
 let nav = document.querySelector('nav');
@@ -85,23 +84,24 @@ const updateKeyboardGame = (evt) => {
 }
 
 //--- Listeners
+if(window.location.pathname == '/playground/keyboard/') {
+    //-- Page Load
+    window.addEventListener('load', () => {
 
-//-- Page Load
-window.addEventListener('load', () => {
+        //- Activate a key
+        activateKey(getRandomKey());
+    });
 
-    //- Activate a key
-    activateKey(getRandomKey());
-});
+    //-- Keypress
+    document.addEventListener('keydown', function(evt) {
+        updateKeyboardGame(evt);
+    });
 
-//-- Keypress
-document.addEventListener('keydown', function(evt) {
-    updateKeyboardGame(evt);
-});
-
-//-- Click
-document.addEventListener('click', function(evt) {
-    updateKeyboardGame(evt);
-})
+    //-- Click
+    document.addEventListener('click', function(evt) {
+        updateKeyboardGame(evt);
+    });    
+}
 
 
 

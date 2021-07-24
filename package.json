@@ -4,10 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass scss/styles.scss css/styles.css",
-    "watch": "sass --watch scss/styles.scss:css/styles.css"
+    "build": "sass src/assets/scss/styles.scss:src/assets/css/styles.css && npx @11ty/eleventy",
+    "watch": "sass --watch src/assets/scss/styles.scss:src/assets/css/styles.css",
+    "dev": "npx @11ty/eleventy --serve"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eleventy": "^1.0.6",
+    "liquidjs": "^9.25.1",
+    "sass": "^1.36.0"
+  }
 }
