@@ -89,6 +89,27 @@
 	}
 }
 
+@mixin button--hamburger($width: 3rem, $height: 3rem, $thickness: 2px, $color: $black) {
+	@include reset-button;
+	position: relative;
+	width: $width;
+	height: $height;
+	border-top: $thickness solid $color;
+	border-bottom: $thickness solid $color;
+
+	&:after {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 100%;
+		height: $thickness;
+		background-color: $color;
+	}
+}
+
 //--- Hovers
 @mixin link-hover--drop($color, $hover, $thickness) {
 	text-underline-offset: var(--offset, 0);
