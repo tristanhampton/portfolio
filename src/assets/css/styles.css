@@ -706,6 +706,11 @@ section.projects .projects__item p {
   flex-direction: column;
   margin-top: 6rem;
 }
+.js-keybaord ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 .js-keybaord .js-keyboard__row {
   display: flex;
   justify-content: space-between;

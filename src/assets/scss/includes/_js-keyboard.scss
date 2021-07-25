@@ -3,6 +3,10 @@
 	flex-direction: column;
 	margin-top: 6rem;
 
+	ul {
+		@include reset-ul;
+	}
+
 	.js-keyboard__row {
 		display: flex;
 		justify-content: space-between;

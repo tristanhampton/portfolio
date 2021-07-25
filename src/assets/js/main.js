@@ -119,7 +119,7 @@ if(window.location.pathname == '/playground/keyboard/') {
     });
 
     //-- Click
-    document.addEventListener('click', function(evt) {
+    document.querySelector('.js-keybaord').addEventListener('click', function(evt) {
         updateKeyboardGame(evt);
     });    
 }
