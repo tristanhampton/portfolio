@@ -13,7 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "eleventy": "^1.0.6",
-    "liquidjs": "^9.25.1",
+    "liquidjs": "^10.0.0",
     "sass": "^1.36.0"
   }
 }
